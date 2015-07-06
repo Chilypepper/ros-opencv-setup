@@ -25,7 +25,7 @@ sudo apt-get -y install ros-indigo-joystick-drivers
 sudo apt-get -y install openssh-server
 sudo apt-get -y install libasio-dev
 sudo apt-get -y install joystick
-sudo apt-add-repository ppa:falk-t-j/qtsixa
+sudo apt-add-repository -y ppa:falk-t-j/qtsixa
 sudo apt-get update
 sudo apt-get -y install sixad
 #RIP arduino
@@ -41,6 +41,6 @@ sudo make install
 cd ~
 sudo ldconfig
 
-sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
 sudo apt-get update
 sudo apt-get -y install sublime-text-installer
