@@ -1,5 +1,6 @@
 #/bin/bash
 clear
+sudo apt-get update
 sudo apt-get -y install libgtk2.0-dev
 sudo apt-get -y install git
 sudo apt-get -y install cmake
