@@ -1,16 +1,13 @@
 #/bin/bash
 clear
 sudo apt-get update
-sudo apt-get -y install libgtk2.0-dev
-sudo apt-get -y install git
-sudo apt-get -y install cmake
+sudo apt-get -y install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
 sudo apt-get -y install qt5-default libvtk6-dev
 sudo apt-get -y install zlib1g-dev libjpeg-dev libwebp-dev libpng-dev libtiff5-dev libjasper-dev libopenexr-dev libgdal-dev
 sudo apt-get -y install libdc1394-22-dev libavcodec-dev libavformat-dev libswscale-dev libtheora-dev libvorbis-dev libxvidcore-dev libx264-dev yasm libopencore-amrnb-dev libopencore-amrwb-dev libv4l-dev libxine2-dev
 sudo apt-get -y install libtbb-dev libeigen3-dev
 sudo apt-get -y install python-dev python-tk python-numpy python3-dev python3-tk python3-numpy
 sudo apt-get -y install ant default-jdk
-sudo apt-get -y install doxygen sphinx-common texlive-latex-extra
 
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list'
 wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - | sudo apt-key add -
@@ -29,6 +26,7 @@ sudo apt-get -y install joystick
 sudo apt-add-repository -y ppa:falk-t-j/qtsixa
 sudo apt-get update
 sudo apt-get -y install sixad
+sudo apt-get -y install ros-indigo-pointgrey-camera-driver
 #RIP arduino
 
 cd ~
@@ -41,6 +39,14 @@ sudo make
 sudo make install
 cd ~
 sudo ldconfig
+git clone https://github.com/Chilypepper/brokenGlasses
+cd brokenGlasses/
+rm -r -f build/
+rm -f -f devel/
+catkin_make
+
+cd ~
+git clone https://github.com/Chilypepper/brokenCamera
 
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
 sudo apt-get update
