@@ -43,6 +43,7 @@ git clone https://github.com/Chilypepper/brokenGlasses
 cd brokenGlasses/
 rm -r -f build/
 rm -f -f devel/
+source /opt/ros/indigo/setup.bash
 catkin_make
 
 cd ~
