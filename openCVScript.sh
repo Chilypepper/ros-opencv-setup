@@ -2,6 +2,7 @@
 clear
 sudo apt-get update
 
+sudo apt-get -y remove unity-webapps-common
 sudo apt-get -y remove fonts-opensymbol libreoffice libreoffice-\* openoffice.o$
 sudo apt-get -y install cmake git libgtk2.0-dev pkg-config libavcodec-dev libav$
 sudo apt-get -y install qt5-default libvtk6-dev
