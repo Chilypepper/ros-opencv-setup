@@ -3,13 +3,20 @@ clear
 sudo apt-get update
 
 sudo apt-get -y remove unity-webapps-common
-sudo apt-get -y remove fonts-opensymbol libreoffice libreoffice-\* openoffice.o$
-sudo apt-get -y install cmake git libgtk2.0-dev pkg-config libavcodec-dev libav$
+sudo apt-get -y remove fonts-opensymbol libreoffice libreoffice-\* 
+sudo apt-get -y remove openoffice.org-dtd-officedocument1.0
+sudo apt-get -y removepython\*-uno uno-libs3-\* ure ure-dbg
+sudo apt-get -y install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
 sudo apt-get -y install qt5-default libvtk6-dev
-sudo apt-get -y install zlib1g-dev libjpeg-dev libwebp-dev libpng-dev libtiff5-$
-sudo apt-get -y install libdc1394-22-dev libavcodec-dev libavformat-dev libswsc$
+
+sudo apt-get -y install zlib1g-dev libjpeg-dev libwebp-dev libpng-dev libtiff5-dev
+sudo apt-get -y install libjasper-dev libopenexr-dev libgdal-dev
+sudo apt-get -y install libdc1394-22-dev libavcodec-dev libavformat-dev libswscale-dev libtheora-dev 
+sudo apt-get -y install libvorbis-dev libxvidcore-dev libx264-dev
+sudo apt-get -y install yasm libopencore-amrnb-dev libopencore-amrwb-dev libv4l-dev libxine2-dev 
 sudo apt-get -y install libtbb-dev libeigen3-dev
-sudo apt-get -y install python-dev python-tk python-numpy python3-dev python3-t$
+sudo apt-get -y install python-dev python-tk 
+sudo apt-get -y install python-numpy python3-dev python3-tk python3-numpy 
 sudo apt-get -y install ant default-jdk
 
 sudo apt-get -y install tcl-vtk
@@ -47,8 +54,6 @@ git clone https://github.com/Chilypepper/brokenGlasses
 cd brokenGlasses/
 rm -r -f build/
 rm -f -f devel/
-source /opt/ros/indigo/setup.bash
-catkin_make
 cd ~
 git clone https://github.com/Chilypepper/brokenCamera
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
